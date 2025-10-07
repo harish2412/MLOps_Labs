@@ -1,0 +1,68 @@
+[2025-10-07T01:12:50.964+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-07T01:12:50.986+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.data_preprocessing_task manual__2025-10-07T01:12:44.000481+00:00 [queued]>
+[2025-10-07T01:12:50.994+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.data_preprocessing_task manual__2025-10-07T01:12:44.000481+00:00 [queued]>
+[2025-10-07T01:12:50.995+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-07T01:12:51.010+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): data_preprocessing_task> on 2025-10-07 01:12:44.000481+00:00
+[2025-10-07T01:12:51.019+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=189) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-10-07T01:12:51.021+0000] {standard_task_runner.py:63} INFO - Started process 206 to run task
+[2025-10-07T01:12:51.021+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'data_preprocessing_task', 'manual__2025-10-07T01:12:44.000481+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpcl2j77ke']
+[2025-10-07T01:12:51.022+0000] {standard_task_runner.py:91} INFO - Job 5: Subtask data_preprocessing_task
+[2025-10-07T01:12:51.061+0000] {task_command.py:426} INFO - Running <TaskInstance: Airflow_Lab2.data_preprocessing_task manual__2025-10-07T01:12:44.000481+00:00 [running]> on host 67aa1867397e
+[2025-10-07T01:12:51.180+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='data_preprocessing_task' AIRFLOW_CTX_EXECUTION_DATE='2025-10-07T01:12:44.000481+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-07T01:12:44.000481+00:00'
+[2025-10-07T01:12:51.181+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-07T01:12:51.195+0000] {python.py:237} INFO - Done. Returned value was: (     mean radius  mean texture  ...  worst symmetry  worst fractal dimension
+546        10.32         16.35  ...          0.2681                  0.07399
+432        20.18         19.54  ...          0.3032                  0.08075
+174        10.66         15.15  ...          0.2710                  0.06164
+221        13.56         13.90  ...          0.3065                  0.08177
+289        11.37         18.89  ...          0.3267                  0.06994
+..           ...           ...  ...             ...                      ...
+184        15.28         22.41  ...          0.3175                  0.09772
+300        19.53         18.90  ...          0.2968                  0.09929
+509        15.46         23.95  ...          0.3013                  0.10670
+230        17.05         19.08  ...          0.3109                  0.09061
+474        10.88         15.62  ...          0.2581                  0.10800
+
+[455 rows x 30 columns],      mean radius  mean texture  ...  worst symmetry  worst fractal dimension
+256        19.55         28.77  ...          0.2818                  0.10050
+428        11.13         16.62  ...          0.2383                  0.07083
+501        13.82         24.49  ...          0.3651                  0.11830
+363        16.50         18.29  ...          0.2394                  0.06469
+564        21.56         22.39  ...          0.2060                  0.07115
+..           ...           ...  ...             ...                      ...
+95         20.26         23.03  ...          0.3689                  0.08368
+128        15.10         16.39  ...          0.2590                  0.07779
+257        15.32         17.27  ...          0.3258                  0.11910
+228        12.62         23.97  ...          0.2826                  0.09585
+488        11.68         16.17  ...          0.2804                  0.08024
+
+[114 rows x 30 columns], 546    1
+432    0
+174    1
+221    1
+289    1
+      ..
+184    0
+300    0
+509    0
+230    0
+474    1
+Name: target, Length: 455, dtype: int64, 256    0
+428    1
+501    0
+363    1
+564    0
+      ..
+95     0
+128    1
+257    0
+228    1
+488    1
+Name: target, Length: 114, dtype: int64)
+[2025-10-07T01:12:51.249+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-07T01:12:51.285+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=data_preprocessing_task, run_id=manual__2025-10-07T01:12:44.000481+00:00, execution_date=20251007T011244, start_date=20251007T011250, end_date=20251007T011251
+[2025-10-07T01:12:51.324+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-10-07T01:12:51.350+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-07T01:12:51.353+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
